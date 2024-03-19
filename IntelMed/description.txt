@@ -1,0 +1,1 @@
+This is a project that I have done with my peers during the databases and web services project. We are working on the model to predict diseas based on patients' data.
