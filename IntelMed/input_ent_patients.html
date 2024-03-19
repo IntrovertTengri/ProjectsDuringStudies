@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IntelMed</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>IntelMed</h1>
+        <div class="header-options">
+            <select class="language-select">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
+            </select>
+            <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#contact">Contact Us</a>
+        <a href="maintenance_page.html">Maintenance Page</a>
+    </div>
+
+    <div class="input-form-header">
+        <img src="img/green_logo 2.png" class="green-logo-2">
+        <h1>Patients' Input Form</h1>
+    </div>
+
+    <form action="patients_input.php" method="post" class ="input-form-body">
+        <div class="input-form">
+            <label>First Name</label>
+            <input type="text" name="firstname" required>
+        </div>
+        <div class="input-form">
+            <label>Last Name</label>
+            <input type="text" name="lastname" required>
+        </div>
+        <div class="input-form">
+            <label>Sex</label>
+            <select class="sex-select" name="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="input-form">
+            <label>Email</label>
+            <input type="text" name="email" required>
+        </div>
+        <div class="input-form">
+            <label>Phone number</label>
+            <input type="text" name="phonenumber" required>
+        </div>
+        <div class="input-form">
+            <label>Password</label>
+            <input type="password" name="password" required>
+        </div>
+        <div class="input-form">
+            <label>Health insurance number</label>
+            <input type="text" name="health_insurance_number" required>
+        </div>
+        <div class="input-form">
+            <label>Address</label>
+            <input type="text" name="address" required>
+        </div>
+        <div class="input-form">
+            <label>Area</label>
+            <select class="area-select" name="area">
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+                <option value="6">7</option>
+                <option value="7">8</option>
+                <option value="8">9</option>
+                <option value="9">10</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+
+    <div class="footer">
+        <p>&copy; 2023 IntelMed. All rights reserved. | Contacts: <a href="mailto:atuichiyev@jacobs-university.de">atuichiyev@jacobs-university.de</a></p>
+    </div>
+
+</body>
+
+</html>

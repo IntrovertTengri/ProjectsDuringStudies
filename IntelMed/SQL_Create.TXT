@@ -1,0 +1,35 @@
+CREATE TABLE Patients
+(
+	health_insurance CHAR(10),
+	area INTEGER
+	address CHAR(256),
+	user_id INTEGER,
+	PRIMARY KEY(health_insurance),
+	FOREIGN KEY(user_id) 
+		REFERENCES Users
+		ON DELETE CASCADE
+		ON UPDATE SET DEFAULT
+)
+
+CREATE TABLE hypertension_patient
+(
+	chest_pain_type INTEGER,
+	resting_blood_pr FLOAT,
+	cholesterol FLOAT,
+	fasting_bld_sugar INTEGER,
+	rest_ecg INTEGER,
+	exrc_induced_ang INTEGER,
+	max_heart_rate INTEGER,
+	health_insurance CHAR(10),
+	FOREIGN KEY(health_insurance) 
+		REFERENCES Patients
+		ON DELETE CASCADE
+		ON UPDATE SET DEFAULT,
+	CHECK(chest_pain_type >= 0 AND chest_pain_type <= 3),
+	CHECK(fasting_bld_sugar >= 0 AND fasting_bld_sugar <= 1),
+	CHECK(rest_ecg >= 0 AND rest_ecg <= 2),
+	CHECK(exrc_induced_ang >= 0 AND exrc_induced_ang <= 1)
+)
+	
+
+	

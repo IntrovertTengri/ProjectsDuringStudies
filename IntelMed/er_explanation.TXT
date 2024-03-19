@@ -1,0 +1,59 @@
+- Entities: users -> patients -> (diabetes_patient, stroke_patient, hypertension_patient)
+	          -> doctors -> (general_practitioner, other_doctors)
+
+- Relationships:
+	general_practitioner -> monitors -> patients (connected by the area = responsibility_area, 1 to many)
+	other_doctors -> sends_report_to -> general_practitioner( many to many, because each GP can get reports about patients
+								 from multiple other doctors and other doctors can send report to
+								 multiple GPs)
+
+- Attributes:
+	users:
+		user_id - id of the user, who enters the system(primary)
+		name - name of the user
+		surname - surname of the user
+		sex - sex of the user
+		email - email of the user
+		phone_number - phone number of the user
+		password - password of the user
+
+	patients:
+		health_insurance - health insurance number of the patients(primary)
+		area - specific block(as number) of the city, in which patient lives
+		address - address of the patient
+
+	doctors:
+		doctor_id - id of the doctor(primary)
+
+	general_practitioner:
+		responsibility_area - the block of the city for which the doctor is responsible
+					(so if a patient 'j' lives in the block 'i', and the doctor is responsible for the block 'i',
+					this doctor is responsible for the patient 'j')
+	other_doctors:
+		specification - i.e. 'cardiologist'.
+
+	stroke_patient:
+		avg_glucose_lvl - average glucose level
+		BMI - body mass index
+		heart_desease - the patient has ever had a heart desease(0 or 1)
+		smoking_status - shows whether the patient smokes or not(0 or 1)
+
+	diabetes_patient:
+		is_high_chol - has a high cholesterol level or not(0 or 1)
+		BMI - body mass index
+		phys_active - presence of the physical activity in the last 30 days(0 or 1)
+		phys_health - physical illness or injury days in past 30 days scale 1-30
+		high_bp - 0 = no high, BP 1 = high BP
+	
+	hypertension_patient:
+		chest_pain_type - Chest pain type: 0: asymptomatic 1: typical angina 2: atypical angina 3: non-anginal pain
+		resting_blood_pr - Resting blood pressure (in mm Hg)
+		cholesterol - Serum cholestoral in mg/dl
+		fasting_bld_sugar - if the patient's fasting blood sugar > 120 mg/dl (1: yes; 0: no)
+		rest_ecg - Resting ECG results: 0: normal 1: ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV) 
+				2: probable or definite left ventricular hypertrophy by Estes' criteria
+		max_heart_rate - Maximum heart rate achieved.
+		exrc_induced_ang - Exercise induced angina (1: yes; 0: no)
+
+	
+		
