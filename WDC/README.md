@@ -240,10 +240,11 @@ In the library, I included multiple unittests to check that the functionality of
 
 ## Authors
 
+Adikhan Tuichiyev
+
+- [@IntrovertTengri](https://github.com/IntrovertTengri)
+
 Philimon Ayalew
 
 - [@philimon-reset](https://github.com/philimon-reset)
 
-Adikhan Tuichiyev
-
-- [@IntrovertTengri](https://github.com/IntrovertTengri)
